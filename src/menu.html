@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu Mie Gacoan Lombok Selong — Pilih favoritmu dari berbagai menu mie, dimsum, minuman, dan paket hemat.">
+  <title>Menu — Mie Gacoan Lombok Selong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/design-tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar--transparent" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="navbar__logo" aria-label="Mie Gacoan — Home">🌶️ Mie Gacoan</a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="menu.html" class="navbar__link">Menu</a>
+        <a href="promo.html" class="navbar__link">Promo</a>
+        <a href="tentang.html" class="navbar__link">Tentang</a>
+        <a href="lokasi.html" class="navbar__link">Lokasi</a>
+      </div>
+      <a href="#pesan" class="btn btn--primary btn--sm navbar__cta focus-visible">Pesan Sekarang</a>
+      <button class="navbar__hamburger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Menu navigasi">
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close btn--icon" aria-label="Tutup menu">✕</button>
+      <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="menu.html" class="mobile-menu__link">Menu</a>
+      <a href="promo.html" class="mobile-menu__link">Promo</a>
+      <a href="tentang.html" class="mobile-menu__link">Tentang</a>
+      <a href="lokasi.html" class="mobile-menu__link">Lokasi</a>
+      <a href="#pesan" class="btn btn--primary focus-visible">Pesan Sekarang</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="page-header__overline">Katalog</span>
+        <h1 class="page-header__title">MENU</h1>
+        <p class="page-header__subtitle body-text">Temukan favoritmu.</p>
+      </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="section" aria-label="Kategori menu">
+      <div class="container">
+        <div class="category-tabs" role="tablist" aria-label="Kategori menu">
+          <button class="category-tab category-tab--active" data-category="semua" role="tab" aria-selected="true">Semua</button>
+          <button class="category-tab" data-category="mie" role="tab" aria-selected="false">Mie</button>
+          <button class="category-tab" data-category="dimsum" role="tab" aria-selected="false">Dimsum</button>
+          <button class="category-tab" data-category="minuman" role="tab" aria-selected="false">Minuman</button>
+          <button class="category-tab" data-category="paket" role="tab" aria-selected="false">Paket</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="section" aria-label="Produk menu">
+      <div class="container">
+        <div class="product-grid">
+          <article class="product-card animate-on-scroll" data-product-id="mie-gacoan" tabindex="0" aria-label="Mie Gacoan — Best Seller">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#C5413C 0%,#E88B6E 100%);">🍜</div>
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Mie</span>
+              <h3 class="product-card__name">Mie Gacoan</h3>
+              <p class="product-card__description">Mie pedas level 1–8 dengan topping pilihan: ayam suwir, ceker, pangsit, telur.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="mie-hompimpa" tabindex="0" aria-label="Mie Hompimpa">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#E88B6E 0%,#F4B8A0 100%);">🍲</div>
+              <span class="product-card__badge">Kids</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Mie</span>
+              <h3 class="product-card__name">Mie Hompimpa</h3>
+              <p class="product-card__description">Mie khusus anak dengan level pedas yang ramah dan topping lucu.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="mie-suit" tabindex="0" aria-label="Mie Suit">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#D66B5F 0%,#C5413C 100%);">🔥</div>
+              <span class="product-card__badge">Ekstrem</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Mie</span>
+              <h3 class="product-card__name">Mie Suit</h3>
+              <p class="product-card__description">Mie level pedas tertinggi untuk penikmat pedas sejati.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="pangsit-goreng" tabindex="0" aria-label="Pangsit Goreng">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#F4B8A0 0%,#E88B6E 100%);">🥟</div>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Dimsum</span>
+              <h3 class="product-card__name">Pangsit Goreng</h3>
+              <p class="product-card__description">Pangsit isi ayam dan sayur, goreng garing dengan saus asam manis.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="siomay" tabindex="0" aria-label="Siomay Ayam">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#F4F0EB 0%,#E8E0D8 100%);">🥟</div>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Dimsum</span>
+              <h3 class="product-card__name">Siomay Ayam</h3>
+              <p class="product-card__description">Siomay ikan dengan bumbu kacang khas dan kecap manis.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="dumpling" tabindex="0" aria-label="Dumpling">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:#F0E8E0;">🍡</div>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Dimsum</span>
+              <h3 class="product-card__name">Dumpling</h3>
+              <p class="product-card__description">Dumpling ayam dan sayur kukus dengan saus pedas manis.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="es-teh" tabindex="0" aria-label="Es Teh Manis">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#87CEEB 0%,#5DADE2 100%);">🥤</div>
+              <span class="product-card__badge">Best Seller</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Minuman</span>
+              <h3 class="product-card__name">Es Teh Manis</h3>
+              <p class="product-card__description">Teh manis segar dengan es batu, cocok netralin pedas.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="es-jeruk" tabindex="0" aria-label="Es Jeruk">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#F9E79F 0%,#F4D03F 100%);">🍊</div>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Minuman</span>
+              <h3 class="product-card__name">Es Jeruk</h3>
+              <p class="product-card__description">Jeruk peras segar dengan gula aren dan es batu.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="es-soda" tabindex="0" aria-label="Es Soda Gembira">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#F5B7B1 0%,#E88B6E 100%);">🧃</div>
+              <span class="product-card__badge">Favorite</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Minuman</span>
+              <h3 class="product-card__name">Es Soda Gembira</h3>
+              <p class="product-card__description">Soda gembira dengan sirup merah, susu kental manis, dan es.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="paket-hemat" tabindex="0" aria-label="Paket Hemat">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#C5413C 0%,#2D3436 100%);">📦</div>
+              <span class="product-card__badge">Hemat</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Paket</span>
+              <h3 class="product-card__name">Paket Hemat</h3>
+              <p class="product-card__description">Mie Gacoan Level 3 + Pangsit Goreng 3pcs + Es Teh Manis.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="paket-berdua" tabindex="0" aria-label="Paket Berdua">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#D66B5F 0%,#C5413C 100%);">👫</div>
+              <span class="product-card__badge">Share</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Paket</span>
+              <h3 class="product-card__name">Paket Berdua</h3>
+              <p class="product-card__description">2x Mie Gacoan + 2x Pangsit Goreng + 2x Minuman + 1x Dimsum.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card animate-on-scroll" data-product-id="paket-sharing" tabindex="0" aria-label="Paket Sharing">
+            <div class="product-card__image">
+              <div class="placeholder-image placeholder-image--card" style="background:linear-gradient(135deg,#E88B6E 0%,#D66B5F 100%);">👥</div>
+              <span class="product-card__badge">Group</span>
+            </div>
+            <div class="product-card__content">
+              <span class="product-card__category">Paket</span>
+              <h3 class="product-card__name">Paket Sharing</h3>
+              <p class="product-card__description">4x Mie Gacoan + 8 Pangsit + 4 Minuman + 2 Dimsum. Cocok 4 orang.</p>
+              <div class="product-card__footer">
+                <span class="product-card__price">[Harga]</span>
+                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__brand">🌶️ Mie Gacoan</span>
+          <p class="footer__description">Mie pedas favoritmu di Selong, Lombok Timur.</p>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" class="footer__link">Home</a></li>
+            <li><a href="menu.html" class="footer__link">Menu</a></li>
+            <li><a href="promo.html" class="footer__link">Promo</a></li>
+            <li><a href="tentang.html" class="footer__link">Tentang</a></li>
+            <li><a href="lokasi.html" class="footer__link">Lokasi</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <ul class="footer__contact">
+            <li class="footer__contact-item">📍 Jl. TGH. Zainuddin Abdul Majid, Selong</li>
+            <li class="footer__contact-item">📞 <a href="https://wa.me/6281234567890" style="color:inherit;" data-whatsapp>WhatsApp</a></li>
+            <li class="footer__contact-item">📸 <a href="#" style="color:inherit;">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; 2026 Mie Gacoan Lombok Selong. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" role="dialog" aria-label="Detail produk" aria-modal="true">
+    <div class="modal">
+      <button class="modal__close focus-visible" aria-label="Tutup dialog">✕</button>
+      <div class="modal__image"></div>
+      <div class="modal__body">
+        <h3 class="modal__name"></h3>
+        <p class="modal__description"></p>
+        <p class="modal__price"></p>
+        <div>
+          <label style="font-weight:var(--weight-semibold);font-size:var(--type-sm);display:block;margin-bottom:var(--space-2);">Pilih Level</label>
+          <div class="level-selector"></div>
+        </div>
+        <div>
+          <label style="font-weight:var(--weight-semibold);font-size:var(--type-sm);display:block;margin-bottom:var(--space-2);">Jumlah</label>
+          <div class="quantity-selector">
+            <button class="quantity-btn quantity-minus" aria-label="Kurangi jumlah" disabled>−</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-btn quantity-plus" aria-label="Tambah jumlah">+</button>
+          </div>
+        </div>
+        <button class="btn btn--primary btn-whatsapp-modal" style="margin-top:var(--space-4);">Pesan via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" role="dialog" aria-label="Gallery lightbox" aria-modal="true">
+    <button class="lightbox__close focus-visible" aria-label="Tutup gallery">✕</button>
+    <img class="lightbox__image" src="" alt="">
+  </div>
+
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

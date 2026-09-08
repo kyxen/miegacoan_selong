@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tentang Mie Gacoan Lombok Selong — Kisah, nilai, dan pengalaman kami dalam menyajikan mie pedas yang menggugah selera.">
+  <title>Tentang — Mie Gacoan Lombok Selong</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/design-tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/pages.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar--transparent" role="navigation" aria-label="Main navigation">
+    <div class="container" style="display:flex;align-items:center;width:100%;">
+      <a href="index.html" class="navbar__logo" aria-label="Mie Gacoan — Home">🌶️ Mie Gacoan</a>
+      <div class="navbar__links">
+        <a href="index.html" class="navbar__link">Home</a>
+        <a href="menu.html" class="navbar__link">Menu</a>
+        <a href="promo.html" class="navbar__link">Promo</a>
+        <a href="tentang.html" class="navbar__link">Tentang</a>
+        <a href="lokasi.html" class="navbar__link">Lokasi</a>
+      </div>
+      <a href="#pesan" class="btn btn--primary btn--sm navbar__cta focus-visible">Pesan Sekarang</a>
+      <button class="navbar__hamburger" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Menu navigasi">
+    <div class="mobile-menu__drawer">
+      <button class="mobile-menu__close btn--icon" aria-label="Tutup menu">✕</button>
+      <a href="index.html" class="mobile-menu__link">Home</a>
+      <a href="menu.html" class="mobile-menu__link">Menu</a>
+      <a href="promo.html" class="mobile-menu__link">Promo</a>
+      <a href="tentang.html" class="mobile-menu__link">Tentang</a>
+      <a href="lokasi.html" class="mobile-menu__link">Lokasi</a>
+      <a href="#pesan" class="btn btn--primary focus-visible">Pesan Sekarang</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <span class="page-header__overline">Cerita</span>
+        <h1 class="page-header__title">TENTANG KAMI</h1>
+        <p class="page-header__subtitle body-text">Pedasnya Punya Cerita.</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="container">
+        <div class="about__layout">
+          <div class="about__image animate-on-scroll">
+            <div style="aspect-ratio:4/5;background:linear-gradient(135deg,#2D3436 0%,#4A5568 100%);border-radius:var(--radius-xl);display:flex;align-items:center;justify-content:center;font-size:8rem;">🍜</div>
+          </div>
+          <div class="animate-on-scroll">
+            <span class="section-heading__overline">Sejarah Singkat</span>
+            <h2 class="heading-lg">Kisah Kami</h2>
+            <p class="body-text muted" style="margin-top:var(--space-4);max-width:45ch;line-height:1.7;">
+              Mie Gacoan lahir dari keinginan untuk menyajikan mie pedas yang autentik dan inovatif. 
+              Dimulai dari sebuah warung kecil di Jakarta, kami tumbuh menjadi jaringan restoran 
+              favorit pecinta mie pedas di seluruh Indonesia.
+            </p>
+            <div class="about__highlights">
+              <div class="about__highlight">
+                <div class="about__highlight-icon" aria-hidden="true">🍜</div>
+                <span class="about__highlight-text">Mie Favorit</span>
+              </div>
+              <div class="about__highlight">
+                <div class="about__highlight-icon" aria-hidden="true">🔥</div>
+                <span class="about__highlight-text">Level Pedas</span>
+              </div>
+              <div class="about__highlight">
+                <div class="about__highlight-icon" aria-hidden="true">🥟</div>
+                <span class="about__highlight-text">Dimsum</span>
+              </div>
+              <div class="about__highlight">
+                <div class="about__highlight-icon" aria-hidden="true">👥</div>
+                <span class="about__highlight-text">Tempat Nongkrong</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section--cream">
+      <div class="container">
+        <span class="section-heading__overline">Nilai Kami</span>
+        <h2 class="heading-lg text-center" style="margin-bottom:var(--space-6);">Nilai yang Membentuk Kami</h2>
+        <div class="grid-3" style="gap:var(--space-6);">
+          <div class="text-center p-6">
+            <div style="width:80px;height:80px;background:#FFD166;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);font-size:2rem;">🌶️</div>
+            <h3 class="heading-xl">Pedaskan</h3>
+            <p class="muted" style="max-width:20ch;margin:0 auto;">Selalu memberikan kepedasan yang sesuai selera.</p>
+          </div>
+          <div class="text-center p-6">
+            <div style="width:80px;height:80px;background:#A8E6CF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);font-size:2rem;">✨</div>
+            <h3 class="heading-xl">Inovatif</h3>
+            <p class="muted" style="max-width:20ch;margin:0 auto;">Menciptakan variasi menu yang selalu baru.</p>
+          </div>
+          <div class="text-center p-6">
+            <div style="width:80px;height:80px;background:#FADBD8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--space-4);font-size:2rem;">👨‍👩‍👧‍👦</div>
+            <h3 class="heading-xl">Kerabat</h3>
+            <p class="muted" style="max-width:20ch;margin:0 auto;">Membuat setiap pelanggan merasa seperti di rumah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <div class="container">
+        <span class="section-heading__overline">Pengalaman</span>
+        <h2 class="heading-lg text-center" style="margin-bottom:var(--space-6);">Pengalaman Bertahan Waktu</h2>
+        <div class="about-page__stats">
+          <div class="about-page__stat">
+            <div class="about-page__stat-number">01</div>
+            <div class="about-page__stat-label">Variasi Mie</div>
+          </div>
+          <div class="about-page__stat">
+            <div class="about-page__stat-number">02</div>
+            <div class="about-page__stat-label">Jenis Dimsum</div>
+          </div>
+          <div class="about-page__stat">
+            <div class="about-page__stat-number">03</div>
+            <div class="about-page__stat-label">Level Pedas</div>
+          </div>
+          <div class="about-page__stat">
+            <div class="about-page__stat-number">04</div>
+            <div class="about-page__stat-label">Tempat Nongkrong</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div>
+            <span class="footer__brand">🌶️ Mie Gacoan</span>
+            <p style="margin-top:var(--space-3);font-size:var(--type-sm);">Mie pedas favoritmu di Selong, Lombok Timur.</p>
+          </div>
+          <div>
+            <h4 style="color:#FFFFFF;font-family:var(--font-headline);font-weight:var(--weight-semibold);margin-bottom:var(--space-4);">Quick Links</h4>
+            <ul class="footer__links">
+              <li><a href="index.html" class="footer__link">Home</a></li>
+              <li><a href="menu.html" class="footer__link">Menu</a></li>
+              <li><a href="promo.html" class="footer__link">Promo</a></li>
+              <li><a href="tentang.html" class="footer__link">Tentang</a></li>
+              <li><a href="lokasi.html" class="footer__link">Lokasi</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color:#FFFFFF;font-family:var(--font-headline);font-weight:var(--weight-semibold);margin-bottom:var(--space-4);">Contact</h4>
+            <ul class="footer__contact">
+              <li class="footer__contact-item">📍 Jl. TGH. Zainuddin Abdul Majid, Selong</li>
+              <li class="footer__contact-item">📞 <a href="https://wa.me/6281234567890" style="color:inherit;" data-whatsapp>WhatsApp</a></li>
+              <li class="footer__contact-item">📸 <a href="#" style="color:inherit;">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>&copy; 2026 Mie Gacoan Lombok Selong. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

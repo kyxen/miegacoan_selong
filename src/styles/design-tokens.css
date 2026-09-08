@@ -1,0 +1,181 @@
+/* ========== DESIGN TOKENS — Mie Gacoan Lombok Selong ========== */
+
+/* ========== Color System ========== */
+:root {
+  /* Primary — deep spicy red */
+  --color-primary: #C5413C;
+  --color-primary-hover: #A83530;
+  --color-primary-active: #8B2A24;
+
+  /* Secondary — dark charcoal */
+  --color-secondary: #2D3436;
+  --color-secondary-light: #5D6D7E;
+
+  /* Neutrals — warm */
+  --color-neutral-light: #F7F5F0;
+  --color-neutral: #E9E7E2;
+  --color-neutral-warm: #FAF8F6;
+
+  /* Accent — used sparingly */
+  --color-accent: #FFD166;
+
+  /* State */
+  --color-success: #38A169;
+  --color-warning: #E6A729;
+
+  /* Background variants */
+  --color-bg-page: #F7F5F0;
+  --color-bg-card: #FFFFFF;
+  --color-bg-section: #FFFFFF;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}
+
+/* ========== Typography ========== */
+:root {
+  /* Font families */
+  --font-headline: "Playfair Display", "Georgia", serif;
+  --font-body: "Inter", "system-ui", -apple-system, sans-serif;
+
+  /* Scale */
+  --type-scale: 1.25; /* base: 16px → 20px → 25px → 31px → 39px */
+
+  /* Sizes */
+  --type-xs: 0.75rem;     /* 12px  */
+  --type-sm: 0.875rem;    /* 14px  */
+  --type-base: 1rem;      /* 16px  */
+  --type-lg: 1.25rem;     /* 20px  */
+  --type-xl: 1.5rem;      /* 24px  */
+  --type-2xl: 1.875rem;   /* 30px  */
+  --type-3xl: 2.25rem;    /* 36px  */
+  --type-4xl: 3rem;       /* 48px  */
+  --type-5xl: 4.5rem;     /* 72px  */
+  --type-6xl: 6rem;       /* 96px  */
+
+  /* Weights */
+  --weight-thin: 100;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* Line heights */
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+  --line-relaxed: 1.625;
+}
+
+/* Typographic hierarchy applied */
+h1 { font: var(--type-6xl) var(--font-headline) var(--weight-bold); line-height: var(--line-tight); }
+h2 { font: var(--type-5xl) var(--font-headline) var(--weight-bold); line-height: var(--line-tight); }
+h3 { font: var(--type-4xl) var(--font-headline) var(--weight-bold); line-height: var(--line-tight); }
+h4 { font: var(--type-3xl) var(--font-headline) var(--weight-semibold); line-height: var(--line-normal); }
+h5 { font: var(--type-xl) var(--font-headline) var(--weight-semibold); line-height: var(--line-normal); }
+h6 { font: var(--type-lg) var(--font-headline) var(--weight-medium); line-height: var(--line-normal); }
+
+body { font: var(--type-base) var(--font-body) var(--weight-regular); line-height: var(--line-normal); }
+small { font: var(--type-xs) var(--font-body) var(--weight-regular); }
+strong { font-weight: var(--weight-bold); }
+
+/* ========== Spacing System ========== */
+:root {
+  /* Scale: 4px base, multiplied by 1.25 */
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4px  */
+  --space-2: 0.5rem;    /* 8px  */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 2.5rem;    /* 40px */
+  --space-8: 3rem;      /* 48px */
+  --space-9: 4rem;      /* 64px */
+  --space-10: 5rem;     /* 80px */
+}
+
+/* ========== Radius System ========== */
+:root {
+  --radius-none: 0;
+  --radius-sm: 0.25rem;    /* 4px  */
+  --radius-md: 0.5rem;     /* 8px  */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-full: 9999px;
+}
+
+/* ========== Shadow System ========== */
+:root {
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== Transition System ========== */
+:root {
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== Button Styles ========== */
+:root {
+  --btn-height: 48px;
+  --btn-font-size: 0.875rem;
+  --btn-font-weight: var(--weight-semibold);
+  --btn-border-radius: var(--radius-md);
+  --btn-transition: var(--transition-normal);
+}
+
+/* ========== Card Styles ========== */
+:root {
+  --card-bg: var(--color-bg-card);
+  --card-border-radius: var(--radius-md);
+  --card-shadow: var(--shadow-sm);
+  --card-transition: var(--transition-fast);
+}
+
+/* ========== Section ========== */
+:root {
+  --section-padding: var(--space-8) var(--space-4);
+}
+
+/* ========== Navbar ========== */
+:root {
+  --navbar-height: 72px;
+  --navbar-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== Color utilities ========== */
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-neutral { color: var(--color-neutral); }
+.text-accent { color: var(--color-accent); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-neutral-light { background-color: var(--color-neutral-light); }
+.bg-neutral-warm { background-color: var(--color-neutral-warm); }
+.bg-accent { background-color: var(--color-accent); }
+
+/* Focus ring */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========== End of Design Tokens ========== */
