@@ -1,0 +1,127 @@
+{
+  "categories": [
+    { "id": "semua", "name": "Semua" },
+    { "id": "mie", "name": "Mie" },
+    { "id": "dimsum", "name": "Dimsum" },
+    { "id": "minuman", "name": "Minuman" },
+    { "id": "paket", "name": "Paket" }
+  ],
+  "products": [
+    {
+      "id": "mie-gacoan",
+      "name": "Mie Gacoan",
+      "category": "mie",
+      "description": "Mie pedas level 1-8 dengan topping pilihan: ayam suwir, ceker, pangsit, atau telur.",
+      "price": "[Harga]",
+      "image": "/assets/food/mie-gacoan.jpg",
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "badge": "Best Seller"
+    },
+    {
+      "id": "mie-hompimpa",
+      "name": "Mie Hompimpa",
+      "name": "Mie Hompimpa",
+      "category": "mie",
+      "description": "Mie khusus anak dengan level pedas yang ramah dan topping lucu.",
+      "price": "[Harga]",
+      "image": "/assets/food/mie-hompimpa.jpg",
+      "levels": [1, 2, 3, 4],
+      "badge": "Kids"
+    },
+    {
+      "id": "mie-suit",
+      "name": "Mie Suit",
+      "category": "mie",
+      "description": "Mie level pedas tertinggi untuk penikmat pedas sejati. Level 6-8.",
+      "price": "[Harga]",
+      "image": "/assets/food/mie-suit.jpg",
+      "levels": [5, 6, 7, 8],
+      "badge": "Ekstrem"
+    },
+    {
+      "id": "pangsit-goreng",
+      "name": "Pangsit Goreng",
+      "category": "dimsum",
+      "description": "Pangsit isi ayam dan sayur, goreng garing dengan saus asam manis.",
+      "price": "[Harga]",
+      "image": "/assets/food/pangsit-goreng.jpg",
+      "levels": []
+    },
+    {
+      "id": "siomay",
+      "name": "Siomay",
+      "category": "dimsum",
+      "description": "Siomay ikan dengan bumbu kacang khas dan kecap manis.",
+      "price": "[Harga]",
+      "image": "/assets/food/siomay.jpg",
+      "levels": []
+    },
+    {
+      "id": "dumpling",
+      "name": "Dumpling",
+      "category": "dimsum",
+      "description": "Dumpling ayam dan sayur kukus dengan saus pedas manis.",
+      "price": "[Harga]",
+      "image": "/assets/food/dumpling.jpg",
+      "levels": []
+    },
+    {
+      "id": "es-teh",
+      "name": "Es Teh Manis",
+      "category": "minuman",
+      "description": "Teh manis segar dengan es batu, cocok netralin pedas.",
+      "price": "[Harga]",
+      "image": "/assets/food/es-teh.jpg",
+      "levels": []
+    },
+    {
+      "id": "es-jeruk",
+      "name": "Es Jeruk",
+      "category": "minuman",
+      "description": "Jeruk peras segar dengan gula aren dan es batu.",
+      "price": "[Harga]",
+      "image": "/assets/food/es-jeruk.jpg",
+      "levels": []
+    },
+    {
+      "id": "es-soda",
+      "name": "Es Soda Gembira",
+      "category": "minuman",
+      "description": "Soda gembira dengan sirup merah, susu kental manis, dan es.",
+      "price": "[Harga]",
+      "image": "/assets/food/es-soda.jpg",
+      "levels": [],
+      "badge": "Favorite"
+    },
+    {
+      "id": "paket-hemat",
+      "name": "Paket Hemat",
+      "category": "paket",
+      "description": "Mie Gacoan Level 3 + Pangsit Goreng 3pcs + Es Teh Manis.",
+      "price": "[Harga]",
+      "image": "/assets/food/paket-hemat.jpg",
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "badge": "Hemat"
+    },
+    {
+      "id": "paket-berdua",
+      "name": "Paket Berdua",
+      "category": "paket",
+      "description": "2x Mie Gacoan + 2x Pangsit Goreng + 2x Minuman + 1x Dimsum.",
+      "price": "[Harga]",
+      "image": "/assets/food/paket-berdua.jpg",
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "badge": "Share"
+    },
+    {
+      "id": "paket-sharing",
+      "name": "Paket Sharing",
+      "category": "paket",
+      "description": "4x Mie Gacoan + 8 Pangsit + 4 Minuman + 2 Dimsum. Cocok 4 orang.",
+      "price": "[Harga]",
+      "image": "/assets/food/paket-sharing.jpg",
+      "levels": [1, 2, 3, 4, 5, 6, 7, 8],
+      "badge": "Group"
+    }
+  ]
+}
