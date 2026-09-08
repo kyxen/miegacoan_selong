@@ -1,5 +1,12 @@
 /* ========== Mie Gacoan Lombok Selong — Main JS ========== */
 
+// GSAP + ScrollTrigger + Lenis (bundled via your build step; see note below)
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
+
+gsap.registerPlugin(ScrollTrigger);
+
 /* ========== DOM Elements ========== */
 const navbar = document.querySelector('.navbar');
 const mobileMenuBtn = document.querySelector('.navbar__hamburger');
@@ -29,6 +36,10 @@ let menuData = { categories: [], products: [] };
 
 /* ========== INIT ========== */
 function init() {
+  // Smooth scroll first — before ScrollTrigger/gsap animations touch scroll
+  setupLenis();
+  setupScrollProgress();
+
   handleScroll();
   setupNavbar();
   setupMobileMenu();
@@ -37,41 +48,38 @@ function init() {
   setupModal();
   setupLightbox();
   setupWhatsApp();
-  setupScrollProgress();
   setupResponsiveImages();
   setupPageLoadAnimations();
   setupQuantitySelectors();
 
-  // Page load animations
-  setTimeout(() => {
-    document.body.classList.add('body-loaded');
-  }, 100);
+  // Page load entrance timeline (GSAP)
+  buildEntranceTimeline();
+  buildScrollRevealAnimations();
 
   // Fetch menu data
   fetchMenuData();
 }
 
-/* ========== NAVBAR ========== */
+/* ========== NAVBAR & HERO SCROLL CLASSES ========== */
+function updateNavbarScrollClass() {
+  if (!navbar) return;
+  if (window.scrollY > 80) navbar.classList.add('navbar--scrolled');
+  else navbar.classList.remove('navbar--scrolled');
+}
+
+function updateHeroScrollClass() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+  if (window.scrollY > 60) hero.classList.add('scrolled');
+  else hero.classList.remove('scrolled');
+}
+
+/* ========== (Fallback) Native scroll listener ========== */
 function handleScroll() {
   window.addEventListener('scroll', () => {
-    if (navbar) {
-      if (window.scrollY > 80) {
-        navbar.classList.add('navbar--scrolled');
-      } else {
-        navbar.classList.remove('navbar--scrolled');
-      }
-    }
-
-    // Hero parallax
-    const hero = document.querySelector('.hero');
-    if (hero) {
-      if (window.scrollY > 60) {
-        hero.classList.add('scrolled');
-      } else {
-        hero.classList.remove('scrolled');
-      }
-    }
-  });
+    updateNavbarScrollClass();
+    updateHeroScrollClass();
+  }, { passive: true });
 }
 
 function setupNavbar() {
@@ -376,17 +384,51 @@ function setupWhatsApp() {
   });
 }
 
-/* ========== SCROLL PROGRESS ========== */
+/* ========== LENIS SMOOTH SCROLL ========== */
+let lenis = null;
+
+function setupLenis() {
+  if (typeof Lenis === 'undefined') return;
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => 1 - Math.pow(1 - t, 4),
+    smoothWheel: true,
+  });
+
+  // Sync GSAP ticker to Lenis RAF so ScrollTrigger reads real scroll positions
+  gsap.ticker.add((time, delta) => lenis.raf(time, delta));
+
+  lenis.on('scroll', () => {
+    ScrollTrigger.update();
+    updateScrollProgress();
+    updateHeroScrollClass();
+  });
+}
+
+function stopLenis() {
+  if (!lenis) return;
+  gsap.ticker.remove((time, delta) => lenis.raf(time, delta));
+  lenis.destroy();
+  lenis = null;
+}
+
+/* ========== SCROLL PROGRESS (GSAP) ========== */
+function updateScrollProgress() {
+  if (!scrollProgress) return;
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = max > 0 ? window.scrollY / max : 0;
+  gsap.set(scrollProgress, { scaleX: Math.max(0, Math.min(1, pct)) });
+}
+
 function setupScrollProgress() {
   if (!scrollProgress) return;
 
-  window.addEventListener('scroll', () => {
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
-    const clamped = Math.max(0, Math.min(1, scrolled));
-    // Use data attribute; CSS animates the ::after pseudo-element
-    scrollProgress.setAttribute('data-progress', String(clamped));
-  });
+  // Initial render
+  updateScrollProgress();
+
+  // Lenis scroll handler already calls updateScrollProgress()
+  // Also wire native listener as a fallback in case Lenis is disabled
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
 }
 
 /* ========== QUANTITY SELECTORS (Global) ========== */
