@@ -12,6 +12,15 @@
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/pages.css">
+  <script type="importmap">
+{
+  "imports": {
+    "gsap": "https://esm.sh/gsap@3.15.0",
+    "gsap/ScrollTrigger": "https://esm.sh/gsap@3.15.0/ScrollTrigger",
+    "lenis": "https://esm.sh/lenis@1.3.26"
+  }
+}
+</script>
 </head>
 <body>
   <!-- Scroll Progress -->
@@ -53,21 +62,46 @@
     <section class="hero hero--home" id="hero">
       <div class="container">
         <div class="hero__content">
-          <h1 class="hero__headline">MIE PEDAS<br>FAVORITMU.</h1>
-          <p class="hero__subheadline body-text">Pedasnya nampol, rasanya bikin balik lagi.</p>
+          <div class="hero__badge animate-badge">
+            <span class="hero__badge-dot"></span>
+            <span>Now Open — Selong, Lombok Timur</span>
+          </div>
+          <h1 class="hero__headline">MIE PEDAS<br><span class="hero__headline-accent">FAVORITMU.</span></h1>
+          <p class="hero__subheadline body-text">Pedasnya nampol, rasanya bikin balik lagi.<br>Level 1–8, pilih tantanganmu.</p>
           <div class="hero__cta-group">
             <a href="menu.html" class="btn btn--primary focus-visible">
               Lihat Menu
               <span class="btn-arrow" aria-hidden="true">→</span>
             </a>
             <a href="https://wa.me/6281234567890" class="btn btn--secondary focus-visible" data-whatsapp data-message="Halo Mie Gacoan Selong, saya ingin memesan.">
-              Pesan Sekarang
+              Pesan via WhatsApp
             </a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number">8</span>
+              <span class="hero__stat-label">Level Pedas</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">10+</span>
+              <span class="hero__stat-label">Menu Pilihan</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-number">⭐ 4.8</span>
+              <span class="hero__stat-label">Rating</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="hero__image">
-        <div class="placeholder-image placeholder-image--hero" style="background:linear-gradient(135deg, var(--color-primary) 0%, #D66B5F 100%);">🌶️</div>
+        <div class="placeholder-image placeholder-image--hero" style="background:linear-gradient(135deg, #C5413C 0%, #E88B6E 60%, #F4B8A0 100%);">
+          <span style="font-size:6rem;">🍜</span>
+        </div>
+        <div class="hero__image-badge">
+          <span class="hero__image-badge-text">🔥 Best Seller</span>
+        </div>
       </div>
       <div class="hero__decor-chili" aria-hidden="true">🌶️</div>
     </section>
@@ -150,9 +184,23 @@
     <section class="menu-preview" aria-labelledby="menu-preview-title">
       <div class="container">
         <div class="section-heading animate-on-scroll">
-          <span class="section-heading__overline">Semua yang</span>
+          <span class="section-heading__overline">Menu Kami</span>
           <h2 class="section-heading__title heading-lg" id="menu-preview-title">Semua yang Kamu Suka.</h2>
           <p class="section-heading__subtitle body-text">Pilih dari berbagai kategori makanan favoritmu.</p>
+        </div>
+        <!-- Search Bar -->
+        <div class="menu-search-wrap animate-on-scroll">
+          <div class="menu-search-inner">
+            <span class="menu-search-icon" aria-hidden="true">🔍</span>
+            <input
+              type="search"
+              id="menu-search"
+              class="menu-search-input"
+              placeholder="Cari menu, contoh: Mie Gacoan..."
+              aria-label="Cari menu"
+              autocomplete="off"
+            >
+          </div>
         </div>
         <div class="category-tabs animate-on-scroll" role="tablist" aria-label="Kategori menu">
           <button class="category-tab category-tab--active" data-category="semua" role="tab" aria-selected="true">Semua</button>
@@ -161,49 +209,13 @@
           <button class="category-tab" data-category="minuman" role="tab" aria-selected="false">Minuman</button>
           <button class="category-tab" data-category="paket" role="tab" aria-selected="false">Paket</button>
         </div>
-        <div class="product-grid">
-          <article class="product-card animate-on-scroll stagger-child">
-            <div class="product-card__image">
-              <div class="placeholder-image placeholder-image--card" style="background:#E8E0D8;">🍜</div>
-            </div>
-            <div class="product-card__content">
-              <span class="product-card__category">Mie</span>
-              <h3 class="product-card__name">Mie Gacoan Level 5</h3>
-              <p class="product-card__description">Pedas level 5 dengan topping ayam suwir dan pangsit.</p>
-              <div class="product-card__footer">
-                <span class="product-card__price">[Harga]</span>
-                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
-              </div>
-            </div>
-          </article>
-          <article class="product-card animate-on-scroll stagger-child">
-            <div class="product-card__image">
-              <div class="placeholder-image placeholder-image--card" style="background:#F0E8E0;">🥟</div>
-            </div>
-            <div class="product-card__content">
-              <span class="product-card__category">Dimsum</span>
-              <h3 class="product-card__name">Siomay Ayam</h3>
-              <p class="product-card__description">Siomay ikan dengan bumbu kacang khas.</p>
-              <div class="product-card__footer">
-                <span class="product-card__price">[Harga]</span>
-                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
-              </div>
-            </div>
-          </article>
-          <article class="product-card animate-on-scroll stagger-child">
-            <div class="product-card__image">
-              <div class="placeholder-image placeholder-image--card" style="background:#F4F0EB;">🥤</div>
-            </div>
-            <div class="product-card__content">
-              <span class="product-card__category">Minuman</span>
-              <h3 class="product-card__name">Es Teh Manis</h3>
-              <p class="product-card__description">Teh manis segar dengan es batu, cocok netralin pedas.</p>
-              <div class="product-card__footer">
-                <span class="product-card__price">[Harga]</span>
-                <button class="btn btn--ghost btn--sm product-card__cta">Pesan</button>
-              </div>
-            </div>
-          </article>
+        <!-- Product grid diisi oleh JavaScript dari menu.json -->
+        <div class="product-grid" id="menu-preview-grid" aria-live="polite">
+          <!-- Loading state -->
+          <div class="menu-loading" style="grid-column:1/-1;text-align:center;padding:var(--space-10);color:var(--color-secondary-light);">
+            <div style="font-size:2rem;margin-bottom:var(--space-3);">⏳</div>
+            <p>Memuat menu...</p>
+          </div>
         </div>
         <div class="animate-on-scroll" style="text-align:center;margin-top:var(--space-8);">
           <a href="menu.html" class="btn btn--secondary focus-visible">
@@ -407,6 +419,6 @@
   <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
   <!-- Scripts -->
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

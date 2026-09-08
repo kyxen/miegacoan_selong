@@ -105,6 +105,7 @@ strong { font-weight: var(--weight-bold); }
   --space-8: 3rem;      /* 48px */
   --space-9: 4rem;      /* 64px */
   --space-10: 5rem;     /* 80px */
+  --space-12: 6rem;     /* 96px */
 }
 
 /* ========== Radius System ========== */

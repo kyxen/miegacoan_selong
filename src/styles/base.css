@@ -295,7 +295,8 @@ button {
   font-family: var(--font-headline);
   font-weight: var(--weight-bold);
   font-size: var(--type-xl);
-  color: #FFFFFF;
+  color: var(--color-secondary);
+  transition: color var(--transition-fast);
 }
 
 .navbar__logo img {
@@ -316,13 +317,26 @@ button {
   font-family: var(--font-body);
   font-size: var(--type-base);
   font-weight: var(--weight-medium);
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-secondary-light);
   transition: color var(--transition-fast);
   padding-block: var(--space-2);
 }
 
 .navbar__link:hover {
-  color: #FFFFFF;
+  color: var(--color-secondary);
+}
+
+/* Scrolled state — links become dark on white bg */
+.navbar--scrolled .navbar__logo {
+  color: var(--color-secondary);
+}
+
+.navbar--scrolled .navbar__link {
+  color: var(--color-secondary-light);
+}
+
+.navbar--scrolled .navbar__link:hover {
+  color: var(--color-secondary);
 }
 
 .navbar__cta {
@@ -1180,13 +1194,10 @@ button {
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  transform: scaleX(0);
+  transform: scaleX(var(--progress, 0));
   transform-origin: left;
-  transition: transform 0.1s linear;
-}
-
-.scroll-progress[data-progress="1"]::after {
-  transform: scaleX(1);
+  will-change: transform;
+  transition: transform 0.08s linear;
 }
 
 /* ========== RESPONSIVE HELPERS ========== */

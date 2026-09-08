@@ -399,8 +399,6 @@
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
-  opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
@@ -854,58 +852,17 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.animate-in .stagger-child,
-.body-loaded .stagger-child {
+.animate-in .stagger-child {
   opacity: 1;
   transform: translateY(0);
 }
 
-.animate-in .stagger-child:nth-child(1),
-.body-loaded .stagger-child:nth-child(1) { transition-delay: 0ms; }
-.animate-in .stagger-child:nth-child(2),
-.body-loaded .stagger-child:nth-child(2) { transition-delay: 80ms; }
-.animate-in .stagger-child:nth-child(3),
-.body-loaded .stagger-child:nth-child(3) { transition-delay: 160ms; }
-.animate-in .stagger-child:nth-child(4),
-.body-loaded .stagger-child:nth-child(4) { transition-delay: 240ms; }
-.animate-in .stagger-child:nth-child(5),
-.body-loaded .stagger-child:nth-child(5) { transition-delay: 320ms; }
-.animate-in .stagger-child:nth-child(6),
-.body-loaded .stagger-child:nth-child(6) { transition-delay: 400ms; }
-
-/* Hero entrance */
-.body-loaded .hero__headline {
-  animation: fadeUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
-}
-
-.body-loaded .hero__subheadline {
-  animation: fadeUp 0.7s ease 0.2s both;
-}
-
-.body-loaded .hero__cta-group {
-  animation: fadeUp 0.7s ease 0.3s both;
-}
-
-.body-loaded .hero__decor-chili {
-  animation: float 6s ease-in-out 1.5s infinite both;
-}
-
-/* Gallery entrance */
-.body-loaded .gallery__item {
-  animation: scaleIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
-}
-
-.body-loaded .gallery__item:nth-child(1) { animation-delay: 0.3s; }
-.body-loaded .gallery__item:nth-child(2) { animation-delay: 0.35s; }
-.body-loaded .gallery__item:nth-child(3) { animation-delay: 0.4s; }
-.body-loaded .gallery__item:nth-child(4) { animation-delay: 0.45s; }
-.body-loaded .gallery__item:nth-child(5) { animation-delay: 0.5s; }
-.body-loaded .gallery__item:nth-child(6) { animation-delay: 0.55s; }
-
-/* Final CTA entrance */
-.body-loaded .final-cta {
-  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
-}
+.animate-in .stagger-child:nth-child(1) { transition-delay: 0ms; }
+.animate-in .stagger-child:nth-child(2) { transition-delay: 80ms; }
+.animate-in .stagger-child:nth-child(3) { transition-delay: 160ms; }
+.animate-in .stagger-child:nth-child(4) { transition-delay: 240ms; }
+.animate-in .stagger-child:nth-child(5) { transition-delay: 320ms; }
+.animate-in .stagger-child:nth-child(6) { transition-delay: 400ms; }
 
 /* Product card filter-in */
 .product-card.filter-in {
@@ -1021,13 +978,8 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  transform: scaleX(0);
+  transform: scaleX(var(--progress, 0));
   transform-origin: left;
-  transition: transform 0.1s linear;
-}
-
-.scroll-progress[data-progress="1"]::after {
-  transform: scaleX(1);
 }
 
 /* ========== RESPONSIVE ========== */
